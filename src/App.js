@@ -1,9 +1,9 @@
 // import logo from './logo.svg';
-import Profile from './components/profile/profile.jsx';
-import user from './data/user.json'
-import './App.css';
-import Statistics from './components/statistics/statistics.jsx'
-import data from './data/data.json'
+import Profile from 'components/profile/profile.jsx';
+import user from 'data/user.json'
+import 'App.css';
+import Statistics from 'components/statistics/statistics.jsx'
+import stats from 'data/stats.json'
 
 function App() {
   return <>
@@ -14,10 +14,10 @@ function App() {
     avatar={user.avatar}
     stats={user.stats}
     />
-    {data.map(stat => <Statistics
-      key={stat.id}
-      title={stat.label}
-      stats={stat.percentage} />)}
+    <Statistics
+      title='Upload stats'
+      stats={stats}
+    />
     </>
   // (
   //   <div className="App">
