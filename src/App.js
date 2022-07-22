@@ -1,9 +1,14 @@
 // import logo from './logo.svg';
-import Profile from 'components/profile/profile.jsx';
-import user from 'data/user.json'
+import Profile from 'components/Profile/Profile.jsx';
+import user from 'data/user.json';
 import 'App.css';
-import Statistics from 'components/statistics/statistics.jsx'
-import stats from 'data/stats.json'
+import Statistics from 'components/Statistics/Statistics.jsx';
+import stats from 'data/stats.json';
+import FriendList from 'components/FriendList/FriendList';
+import friends from 'data/friends.json';
+import FriendListItem from 'components/FriendListItem/FriendLitsItem.jsx'
+import TransactionHistory from 'components/TransactionHistory/TransactionHistory';
+import transactions from 'data/transactions.json'
 
 function App() {
   return <>
@@ -18,25 +23,16 @@ function App() {
       title='Upload stats'
       stats={stats}
     />
-    </>
-  // (
-  //   <div className="App">
-  //     <header className="App-header">
-  //       <img src={logo} className="App-logo" alt="logo" />
-  //       <p>
-  //         Edit <code>src/App.js</code> and save to reload.
-  //       </p>
-  //       <a
-  //         className="App-link"
-  //         href="https://reactjs.org"
-  //         target="_blank"
-  //         rel="noopener noreferrer"
-  //       >
-  //         Learn React
-  //       </a>
-  //     </header>
-  //   </div>
-  // );
+    <FriendList friends={friends}> 
+        {friends.map(friend => <FriendListItem
+          key={friend.id}
+          name={friend.name}
+          avatar={friend.avatar}
+        />)}
+    </FriendList>
+    <TransactionHistory
+      transactions={transactions} />
+  </>
 }
-
 export default App;
+
