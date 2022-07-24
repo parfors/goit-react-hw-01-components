@@ -1,8 +1,8 @@
 // import logo from './logo.svg';
-import Profile from "components/profile/Profile.jsx";
+import Profile from "components/Profile/Profile.jsx";
 import user from "data/user.json";
 import "App.css";
-import Statistics from "components/statistics/Statistics.jsx";
+import Statistics from "components/Statistics/Statistics.jsx";
 import stats from "data/stats.json";
 import FriendList from "components/FriendList/FriendList";
 import friends from "data/friends.json";
@@ -27,6 +27,7 @@ function App() {
             key={friend.id}
             name={friend.name}
             avatar={friend.avatar}
+            isOnline={friend.isOnline}
           />
         ))}
       </FriendList>

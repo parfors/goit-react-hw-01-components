@@ -1,0 +1,15 @@
+.transactionHistory {
+  width: 400px;
+  padding-top: 30px;
+  margin: 30px auto;
+  background-color: rgb(100, 159, 177);
+  text-align: center;
+}
+
+.tHead {
+  background-color: blue;
+}
+
+.tRow:nth-child(2n) {
+  background-color: aqua;
+}

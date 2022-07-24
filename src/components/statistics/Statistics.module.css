@@ -1,0 +1,28 @@
+.statistics {
+  width: 400px;
+  padding-top: 30px;
+  margin: 30px auto;
+  background-color: rgb(44, 146, 75);
+  text-align: center;
+}
+
+.title {
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+
+.list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.item {
+  height: 40px;
+  flex-basis: calc(100% / 3);
+  border: 1px solid;
+}
+.label {
+  display: inline-block;
+  margin-top: 10px;
+}
