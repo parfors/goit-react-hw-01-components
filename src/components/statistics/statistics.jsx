@@ -1,4 +1,4 @@
-import { getRandomHexColor } from "components/support/colorRandomaizer";
+import { getRandomHexColor } from "helpers/colorRandomaizer";
 import PropTypes from "prop-types";
 import css from "./Statistics.module.css";
 
